@@ -11,7 +11,14 @@ function getInput(inputId){
 document.getElementById('calculate-total').addEventListener('click',function(){
 
     
-       /*  const inputFood = document.getElementById('food-input');
+        /* const inputIncome = document.getElementById('input-income');
+        const inputIncomeValue = incomeInput.value;
+        const inputIncomeAmount = parseFloat(incomeInputValue);
+        console.log(incomeInputAmount); */
+        const inputIncomeAmount = getInput('input-income');
+
+
+        /* const inputFood = document.getElementById('food-input');
         const inputFoodValue = inputFood.value;
         const inputFoodAmount = parseFloat(inputFoodValue);
         console.log(inputFoodAmount); */
@@ -38,11 +45,20 @@ document.getElementById('calculate-total').addEventListener('click',function(){
     
 
     
-        let totalExpences = inputFoodAmount + inputRentAmount + inputClothAmount;
-        console.log(totalExpences);
+        let totalExpencesSum = inputFoodAmount + inputRentAmount + inputClothAmount;
+        // console.log(totalExpences);
     
 
-   
+    const totalExpences = document.getElementById('total-expenses');
+    const totalExpencesInnerText = totalExpences.innerText;
+    totalExpences.innerText = totalExpencesSum;
+    // console.log(totalExpencesInputText);
+
+    const inputBalance = document.getElementById('input-balance');
+    const inputBalanceInnerText = inputBalance.innerText;
+    inputBalance.innerText = inputIncomeAmount - totalExpencesSum;
+    
+    
     
 });
 
