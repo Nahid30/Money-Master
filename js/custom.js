@@ -57,7 +57,46 @@ document.getElementById('calculate-total').addEventListener('click',function(){
     const inputBalance = document.getElementById('input-balance');
     const inputBalanceInnerText = inputBalance.innerText;
     inputBalance.innerText = inputIncomeAmount - totalExpencesSum;
+
     
+});
+
+
+
+document.getElementById('calculate-saving').addEventListener('click',function(){
+
+    const inputIncomeAmount = getInput('input-income');
+
+    const inputSave = document.getElementById('save-input');
+    const inputSaveValue = inputSave.value;
+    const inputSaveAmount = parseFloat(inputSaveValue);
+    
+
+
+    const savingCalculation = (inputIncomeAmount * inputSaveAmount) / 100;
+    
+
+    const savingAmount = document.getElementById('saving-amount');
+    const savingAmountInnerText = savingAmount.innerText;
+    const savingAmountParse = parseFloat(savingAmountInnerText);
+    savingAmount.innerText = savingCalculation;
+
+
+
+    const inputBalance = document.getElementById('input-balance');
+    const inputBalanceInnerText = inputBalance.innerText;
+    const inputBalanceAmountParse = parseFloat(inputBalanceInnerText);
+
+    
+    
+    const remainingBalanceCalculation = inputBalanceAmountParse - savingCalculation;
+
+   
+
+    const remainingBalance = document.getElementById('remaining-balance');
+    const remainingBalanceInnerText = remainingBalance.innerText;
+    remainingBalance.innerText = remainingBalanceCalculation;
+
     
     
 });
