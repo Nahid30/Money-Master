@@ -11,9 +11,7 @@ function getInput(inputId){
 document.getElementById('calculate-total').addEventListener('click',function(){
 
    
-        const totalExpences = document.getElementById('total-expenses');
-        const totalExpencesInnerText = totalExpences.innerText;
-        totalExpences.innerText = totalExpencesSum;
+    
 
     
 
@@ -33,7 +31,9 @@ document.getElementById('calculate-total').addEventListener('click',function(){
         let totalExpencesSum = inputFoodAmount + inputRentAmount + inputClothAmount;
         
 
-   
+    const totalExpences = document.getElementById('total-expenses');
+    const totalExpencesInnerText = totalExpences.innerText;
+    totalExpences.innerText = totalExpencesSum;
     
 
     const inputBalance = document.getElementById('input-balance');
