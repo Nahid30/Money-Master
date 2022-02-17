@@ -1,14 +1,15 @@
 
-// function for calculate button and calculation 
+//common function for 'calculate button' and call for all for calculation 
 function getInput(inputId){
     
     const inputField = document.getElementById(inputId);
     const inputValue = inputField.value;
     const inputAmount = parseFloat(inputValue);
+
+    // conditions for error 
     if(inputField.value == ''){
         
         document.getElementById(inputId + '-fillup').style.display='block';
-
     
     }
     else if(inputField.value >= 0 ){
@@ -21,14 +22,10 @@ function getInput(inputId){
         document.getElementById(inputId + '-error').style.display='block';
         document.getElementById(inputId + '-fillup').style.display='none';
     }
-    
-    
-    
-    
-    
-    
+      
     
 }
+
 
 // calculate button and calculation 
 
@@ -53,14 +50,14 @@ document.getElementById('calculate-total').addEventListener('click',function(){
     // total Expences
         const totalExpences = document.getElementById('total-expenses');
         const totalExpencesInnerText = totalExpences.innerText;
-        // totalExpences.innerText = totalExpencesSum;
+        
    
     // total Balance
         const inputBalance = document.getElementById('input-balance');
         const inputBalanceInnerText = inputBalance.innerText;
     
+    // error 
 
-    
     if(isNaN(totalExpencesSum) == false){
         totalExpences.innerText= totalExpencesSum;
         inputBalance.innerText = inputIncomeAmount - totalExpencesSum;
@@ -72,6 +69,7 @@ document.getElementById('calculate-total').addEventListener('click',function(){
 
 });
 
+// clear the expenses field button 
 
 document.getElementById('clear-expenses').addEventListener('click',function(){
 
@@ -85,12 +83,10 @@ document.getElementById('clear-expenses').addEventListener('click',function(){
 
 
 
-
-
-
 // save button added and calculation 
 
-document.getElementById('calculate-saving').addEventListener('click',function(){
+    document.getElementById('calculate-saving').addEventListener('click',function(){
+
     // call the function
     const inputIncomeAmount = getInput('input-income');
 
@@ -98,9 +94,6 @@ document.getElementById('calculate-saving').addEventListener('click',function(){
     // input field of savings Amount
     const inputSaveAmount= getInput('save-input');
 
-    // const inputSave = document.getElementById('save-input');
-    // const inputSaveValue = inputSave.value;
-    // const inputSaveAmount = parseFloat(inputSaveValue);
     
     // savings Amount calculation 
     const savingCalculation = (inputIncomeAmount * inputSaveAmount) / 100;
@@ -109,7 +102,7 @@ document.getElementById('calculate-saving').addEventListener('click',function(){
     const savingAmount = document.getElementById('saving-amount');
     const savingAmountInnerText = savingAmount.innerText;
     const savingAmountParse = parseFloat(savingAmountInnerText);
-    // savingAmount.innerText = savingCalculation;
+    
 
 
     // total balance calculation again to see the remainingBalance
@@ -125,7 +118,8 @@ document.getElementById('calculate-saving').addEventListener('click',function(){
     // declare remaining balance 
     const remainingBalance = document.getElementById('remaining-balance');
     const remainingBalanceInnerText = remainingBalance.innerText;
-    //  remainingBalance.innerText = remainingBalanceCalculation;
+    
+    // error 
 
     if(isNaN(savingCalculation)==false ){
         savingAmount.innerText = savingCalculation;
@@ -138,5 +132,3 @@ document.getElementById('calculate-saving').addEventListener('click',function(){
     
 });
 
-
-   

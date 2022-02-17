@@ -40,8 +40,7 @@
                 <!-- leftside image part -->
 
                 <div class="col-lg-6 col-sm-12 ">
-                <img class="img-fluid"  src="images/leftside.jpg" alt="">
-
+                    <img class="img-fluid"  src="images/leftside.jpg" alt="">
                 </div>
 
                   <!-- rightside calculate part -->
@@ -50,77 +49,84 @@
                     
                 <!-- income part -->
 
-                    <div> 
+                <div> 
+                    <!-- income heading and incom input  -->
                     <h2 class="text-center mt-5 ">Income</h2>
                     <p class="text-center fs-5 ">Income : <input id="input-income" type="text"></p>
-                    <p class="text-center text-danger error" id="input-income-error">please enter your positive number</p>
-                    <p class="text-center text-danger error" id="input-income-fillup">please fillup </p>
-                    </div>
+
+                    <!-- incom error text  -->
+                    <p class="text-center text-danger error" id="input-income-error">Please enter your positive Number</p>
+                    <p class="text-center text-danger error" id="input-income-fillup">Please Fillup </p>
+                </div>
 
 
                 <!-- Expenses part -->
 
-                   <div class="d-flex justify-content-center align-items-center mt-3">
+                <div class="d-flex justify-content-center align-items-center mt-3">
                     
                     <div>
 
-                    <h2 class="text-center mt-5 ">Expenses</h2>
+                        <h2 class="text-center mt-5 ">Expenses</h2>
 
-                       <div>
-
+                    <div>
+                        <!-- food input  -->
                         <p class="text-start fs-5 ">Food : <input id="food-input"   type="text"></p>
 
-                        <p class="text-center text-danger error" id="food-input-error">please enter your positive number</p>
-                        <p class="text-center text-danger error" id="food-input-fillup">please fillup </p>
+                        <!-- food error text  -->
+                        <p class="text-center text-danger error" id="food-input-error">Please enter your positive Number</p>
+                        <p class="text-center text-danger error" id="food-input-fillup">Please Fillup </p>
 
+                        <!-- rent input  -->
                         <p class="text-start fs-5 ">Rent : <input id="rent-input" class="ms-2"   type="text"></p>
 
-                        <p class="text-center text-danger error" id="rent-input-error">please enter your positive number</p>
+                        <!-- rent error text  -->
+                        <p class="text-center text-danger error" id="rent-input-error">Please enter your positive Number</p>
+                        <p class="text-center text-danger error" id="rent-input-fillup">Please Fillup </p>
 
-                        <p class="text-center text-danger error" id="rent-input-fillup">please fillup </p>
-
+                        <!-- cloth input  -->
                         <p class="text-start fs-5 ">Cloth : <input id="cloth-input" type="text"></p>
 
-                        <p class="text-center text-danger error" id="cloth-input-error">please enter your positive number</p>
+                        <!-- cloth error text  -->
+                        <p class="text-center text-danger error" id="cloth-input-error">Please enter your positive Number</p>
+                        <p class="text-center text-danger error" id="cloth-input-fillup">Please Fillup </p>
 
-                        <p class="text-center text-danger error" id="cloth-input-fillup">please fillup </p>
+                    </div>
 
-                       </div>
-
+                        <!-- calculate button  -->
                         <button id="calculate-total" type="button" class="btn btn-primary px-5 fs-5 text-center mt-3">Calculate</button>
                         
+                        <!-- clear button  -->
                         <button id="clear-expenses" type="button" class="btn btn-danger ms-4 mt-3 px-4 fs-5 ">Clear</button>
 
                     </div>
-                   </div>
+                </div>
                    
-                <!-- Total Expenses And Balance    -->
+                <!-- Total Expenses text And Balance text   -->
 
                 <h3 class="text-center mt-5 ">Total Expenses : <span id="total-expenses">00</span> </h3>
                 <h3 class="text-center mt-3 ">Balance : <span id="input-balance">00</span> </h3>
                
                 <!-- Savings Part    -->
 
+                <!-- save input field and button  -->
                 <p class=" text-center fs-5 mt-3">Save : <input id="save-input" class="w-25" type="text"> <span class="mx-2">%</span><button id="calculate-saving" type="button" class="btn btn-success mx-3 px-5">Save</button></p>
 
                
  
                 <div class="text-center">
 
-                    <p class="text-center text-danger error" id="save-input-error">please enter your positive number</p>
+                    <!-- savings error text  -->
+                    <p class="text-center text-danger error" id="save-input-error">Please enter your positive Number</p>
+                    <p class="text-center text-danger error" id="save-input-fillup">Please Fillup </p>
 
-                    <p class="text-center text-danger error" id="save-input-fillup">please fillup </p>
-
-
+                    <!-- saving amount text and remaining-balance text  -->
                     <h5>Saving Amount : <span id="saving-amount">00</span> </h5>
                     <h5>Remaining Balance : <span id="remaining-balance">00</span> </h5>
 
                 </div>
-
               </div> 
              </div>
             </div>
-
         </section>
     </main>
 
