@@ -53,6 +53,8 @@
                     <div> 
                     <h2 class="text-center mt-5 ">Income</h2>
                     <p class="text-center fs-5 ">Income : <input id="input-income" type="text"></p>
+                    <p class="text-center text-danger error" id="input-income-error">please enter your positive number</p>
+                    <p class="text-center text-danger error" id="input-income-fillup">please fillup </p>
                     </div>
 
 
@@ -67,12 +69,27 @@
                        <div>
 
                         <p class="text-start fs-5 ">Food : <input id="food-input"   type="text"></p>
+
+                        <p class="text-center text-danger error" id="food-input-error">please enter your positive number</p>
+                        <p class="text-center text-danger error" id="food-input-fillup">please fillup </p>
+
                         <p class="text-start fs-5 ">Rent : <input id="rent-input" class="ms-2"   type="text"></p>
+
+                        <p class="text-center text-danger error" id="rent-input-error">please enter your positive number</p>
+
+                        <p class="text-center text-danger error" id="rent-input-fillup">please fillup </p>
+
                         <p class="text-start fs-5 ">Cloth : <input id="cloth-input" type="text"></p>
+
+                        <p class="text-center text-danger error" id="cloth-input-error">please enter your positive number</p>
+
+                        <p class="text-center text-danger error" id="cloth-input-fillup">please fillup </p>
 
                        </div>
 
                         <button id="calculate-total" type="button" class="btn btn-primary px-5 fs-5 text-center mt-3">Calculate</button>
+                        
+                        <button id="clear-expenses" type="button" class="btn btn-danger ms-4 mt-3 px-4 fs-5 ">Clear</button>
 
                     </div>
                    </div>
@@ -85,8 +102,15 @@
                 <!-- Savings Part    -->
 
                 <p class=" text-center fs-5 mt-3">Save : <input id="save-input" class="w-25" type="text"> <span class="mx-2">%</span><button id="calculate-saving" type="button" class="btn btn-success mx-3 px-5">Save</button></p>
+
+               
  
                 <div class="text-center">
+
+                    <p class="text-center text-danger error" id="save-input-error">please enter your positive number</p>
+
+                    <p class="text-center text-danger error" id="save-input-fillup">please fillup </p>
+
 
                     <h5>Saving Amount : <span id="saving-amount">00</span> </h5>
                     <h5>Remaining Balance : <span id="remaining-balance">00</span> </h5>
